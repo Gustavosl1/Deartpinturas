@@ -30,7 +30,9 @@
 
 html{
     scroll-behavior: smooth;
+
 }
+
 
 @media only screen and (min-width:1200px) {
     .nav-item>.nav-link {
@@ -340,83 +342,6 @@ section {
     gap: 20px;
 }
 
-/* Orçamento */
-
-#orçamentos {
-    background-color: #FFE53B;
-    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);  
-    padding: 2rem 0rem;
-    color: white;
-    height: 200px;
-}
-
-#orçamentos a{
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 35px;
-    font-family: 'Helvetica-Bold';
-    margin: 60px;
-}
-
-.solicite{
-    color: #ffffff;
-    font-weight: 500;
-    outline: none;
-    font-size: 15px;
-    padding: 7px 22px;
-    transition: 0.5s;
-    text-align: center;
-    animation-duration: 3s;
-    animation-name: slidein;
-}
-
-.whatsapp{
-   width: 130px;
-    height: 130px;
-    margin: 0 auto;
-}
-
-@keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%; 
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-
-    }
-
-
-#orçamentos a:hover{
-    color: #000000;
-}
-
-@media screen and (max-width: 768px) {
-    #orçamentos a{
-        font-size: 25px;
-        margin: 30px;
-        
-    }
-
-    #orçamentos{
-        height: 200px;
-        
-    }
-
-    .whatsapp{
-        width: 50px;
-        height: 50px;
-        margin: 0 auto;
-    }
-
-   
-    
-}
-
-
 .btn {
     display: flex;
     justify-content: center;
@@ -424,15 +349,15 @@ section {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    width: 50px;
-    height: 50px;
-    background-color: #fcfcfc;
-    border: #000000 1px solid;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ff5202;
+    border: #ffffff 1px solid;
     text-decoration: none;
 }
 .btn::after {
-    content: "↑";
-    font-size: 32px;
+    content: url('./img/cursor.png');
     font-weight: bold;
     color: rgb(0, 0, 0);
     transition: margin-top 250ms;
@@ -440,6 +365,110 @@ section {
 .btn:hover::after {
     margin-top:-8px;
 }
+
+/* Compromisso */
+
+#compromisso {
+    background-color: #ff6700;
+    padding: 4rem 0rem;
+    color: white;
+}
+
+#compromisso h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#compromisso p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#compromisso i{
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+@media  (max-width: 768px) {
+    #compromisso i{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .avaliação{
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+}
+
+.estrelas {
+    margin-bottom: 10px;
+    width: 30px;
+    display: flex;
+}  
+
+.estrelas p {
+    margin: 5px;
+    font-weight: 700;
+
+}
+
+#avaliação h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#avaliação img {
+    margin-bottom: 10px;
+}
+
+.btn-avalia{
+    background-color: #ff6700;
+    padding: 10px 20px;
+    width: 250px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.0em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    margin-left: 40%;
+    margin-bottom: 60px;
+    animation: 1s ease-in-out 0s infinite alternate none running pulse;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.btn-avalia:hover {
+    background-color: #000000;
+}
+
+.btn-avalia a{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .btn-avalia{
+        width: 250px;
+        font-size: 15px;	
+        margin-left: 22%;
+    }
+    
+}
+
+
 
 
 
