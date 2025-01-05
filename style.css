@@ -30,8 +30,9 @@
 
 html{
     scroll-behavior: smooth;
-
+    scrollbar-color: #ff6700 #ffffff;
 }
+
 
 
 @media only screen and (min-width:1200px) {
@@ -469,6 +470,65 @@ section {
 }
 
 
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 2rem 0rem;
+}
 
+.galeria img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
 
+.galeria img:hover {
+    transform: scale(1.1);
+}
+
+#galeria h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .galeria img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #galeria h2 {
+        font-size: 2em;
+    }
+
+    .galeria {
+        padding: 2rem 1rem;
+    }
+    
+}
+
+/* Rodapé */
+
+.marca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #000000;
+    gap: 10px;
+    opacity: 0.4;
+}
+
+@media screen and (max-width: 768px) {
+    .marca {
+        font-size: 10px;
+    }
+    
+}
 
