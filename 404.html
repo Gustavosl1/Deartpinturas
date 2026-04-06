@@ -1,24 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erro PÃ¡gina nÃ£o encontrada</title>
-    <link rel="stylesheet" href="404.css">
-</head>
-
-<body>
-    <div>
-        <img src="./img/404.png" alt="Erro 404">
-        <h1>Erro 404</h1>
-        <p>Oops! Parece que vocÃª pintou fora da tela. A pÃ¡gina que vocÃª procura nÃ£o foi encontrada. </p>
-        <p>Vamos voltar ao inÃ­cio e criar algo novo!</p>
-        <button>
-            <a href="./index.html">Voltar para a pÃ¡gina inicial</a>
-        </button>
-    </div>
-    <script src="./404.js"></script>
-</body>
-
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 | Página não encontrada</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/404.css" />
+  </head>
+  <body>
+    <main class="page-404" role="main">
+      <div class="page-404__glow"></div>
+      <section class="card-404" aria-labelledby="title-404">
+        <div class="card-404__media" aria-hidden="true">
+          <img src="assets/img/404.png" alt="" />
+        </div>
+        <div class="card-404__content">
+          <p class="eyebrow">Erro 404</p>
+          <h1 id="title-404">Página não encontrada</h1>
+          <p class="lead">
+            Parece que você pintou fora da tela. A página que você procura não
+            existe ou foi movida.
+          </p>
+          <div class="actions">
+            <a class="btn-primary" href="./index.html">Voltar para a página inicial</a>
+            <a class="btn-ghost" href="./index.html#contato">Falar com a Deart</a>
+          </div>
+          <p class="hint">Se o erro continuar, revise o endereço ou volte mais tarde.</p>
+        </div>
+      </section>
+    </main>
+    <script src="assets/js/404.js"></script>
+  </body>
 </html>

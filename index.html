@@ -1,340 +1,636 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link do bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <!--fontawesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/abddfb1a86.js" crossorigin="anonymous"></script>
-    <!--Icone da Página-->
-    <link rel="icon" href="img/logo_deart.png">
-    <!-- Link do css -->
-    <link rel="stylesheet" href="style.css">
-    <title>Deartpinturas</title>
-</head>
-
-<body>
-    <!-- Navbar -->
-    <header class="header" id="topo">
-        <div class="header-inner">
-            <div class="container-fluid px-lg-5">
-                <nav class="navbar navbar-expand-lg my-navbar">
-                    <a class="navbar-brand" href="#">
-                        <img src="img/logo_deart.png" class="img-fluid" style="width: 40px;">
-                        <span class="logo">Deart</span>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"><i class="fas fa-bars"
-                                style="margin:5px 0px 0px 0px;"></i></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav m-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#sobre">Sobre nós</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#serviços">Serviços</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#avaliação">Avaliações</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#galeria">Galeria</a>
-                            </li>
-                        </ul>
-                        <button class="orçamento">
-                            <a href="https://wa.me/5511972228270" target="_blank">Solicite um orçamento</a> <svg
-                                xmlns="http://www.w3.org/2000/svg" width="50" height="30" class="bi bi-whatsapp"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-                            </svg>
-                        </button>
-                    </div>
-                </nav>
-
-            </div>
-        </div>
-    </header>
-
-    <!-- Banner -->
-    <div class="banner">
-        <div class="banner-content">
-            <h1>Transforme Seus Espaços com a Pintura Perfeita!</h1>
-            <p>Dê vida aos seus ambientes com o toque profissional de quem entende de cores e acabamentos.</p>
-            <a href="#contato" class="banner-btn">Saiba Mais</a>
-        </div>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Deart Pinturas: pintura residencial e comercial com acabamento premium, agilidade e compromisso."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-HoTfzVOG8j/Kcctz7s/UeJm9EazcQVzLxV0NVZO2Ux3V6sA1qYjT0goqgiDGlog9xrG7xqUy2dQayq1L+kLkNg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/abddfb1a86.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preload" as="image" href="assets/img/logo_deart.png" />
+    <link rel="icon" href="assets/img/logo_deart.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Deart Pinturas</title>
+  </head>
+  <body>
+    <div id="loader" aria-hidden="true">
+      <div class="loader-panel">
+        <img src="assets/img/logo_deart.png" alt="Logo Deart" />
+        <strong>Deart Pinturas</strong>
+        <span>Preparando seu projeto...</span>
+        <div class="loader-bar"><i></i></div>
+      </div>
     </div>
 
-    <!-- Sobre nós -->
-    <section id="sobre">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <img src="img/logo_deart.png" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6">
-                    <h2>Sobre Nós</h2>
-                    <p>A Deart é especializada em pinturas em geral, grafiato e textura que atende a residências,
-                        comércios, escolas e industrias.
-                        <br>
-                        Trabalhamos também com tratamentos de trincas, impermeabilização de paredes internas e externas,
-                        rejuntamento de pisos ,assim como lavagem e pintura de telhados.
-                    </p>
-                </div>
-            </div>
+    <div id="welcome-popup" aria-hidden="true">
+      <div class="popup-content">
+        <h2>Bem-vindo à Deart Pinturas</h2>
+        <p>
+          Soluções em pintura residencial e comercial com acabamento impecável,
+          prazo e organização.
+        </p>
+        <div class="popup-actions">
+          <button id="close-welcome" type="button">Quero conhecer</button>
+          <a href="https://wa.me/5511972228270" target="_blank" rel="noopener"
+            >Pedir orçamento</a
+          >
         </div>
+      </div>
+    </div>
+
+    <header class="header fixed-top" id="topo">
+      <div class="header-inner">
+        <div class="container-fluid px-lg-5">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#topo">
+              <img
+                src="assets/img/logo_deart.png"
+                class="img-fluid"
+                id="brand-logo"
+                alt="Deart"
+              />
+              <span class="logo">Deart Pinturas</span>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Alternar navegação"
+            >
+              <span class="navbar-toggler-icon"
+                ><i class="fas fa-bars"></i
+              ></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#topo">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#sobre">Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#avaliacoes">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#galeria">Galeria</a>
+                </li>
+              </ul>
+              <a
+                class="orcamento-btn"
+                href="https://wa.me/5511972228270"
+                target="_blank"
+                rel="noopener"
+              >
+                Solicite um orçamento <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="banner" data-aos="zoom-out" data-aos-duration="1200">
+      <div class="banner-glow"></div>
+      <div class="container banner-content">
+        <h1 data-aos="fade-down" data-aos-delay="150">
+          Transforme seus espaços com uma pintura profissional
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="300">
+          Atendimento ágil, acabamento premium e entrega com padrão de qualidade
+          para residências, comércios e indústrias.
+        </p>
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="450">
+          <a href="#servicos" class="banner-btn">Ver serviços</a>
+          <a href="#galeria" class="banner-btn outline">Ver galeria</a>
+        </div>
+      </div>
     </section>
 
-    <!-- Serviços -->
-    <section id="serviços">
-        <div class="container">
-            <h2>Serviços</h2>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="serviço">
-                        <i class="fas fa-paint-roller"></i>
-                        <h3>Pinturas</h3>
-                        <p>Pinturas em geral, grafiato e textura que atende a residências, comércios, escolas e
-                            industrias, pedras naturais e cimento queimado.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="serviço">
-                        <i class="fas fa-home"></i>
-                        <h3>Tratamentos</h3>
-                        <p>Tratamentos de trincas, impermeabilização de paredes internas e externas.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="serviço">
-                        <i class="fas fa-paint-brush"></i>
-                        <h3>Instalações</h3>
-                        <p>Realizamos instalações de alta qualidade, garantindo um acabamento perfeito e duradouro, como forros, paredes, gesso acartonado, piso vinílico e rodapés.</p>
-                    </div>
-                </div>
+    <section id="sobre" class="section-block" data-reveal>
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 text-center" data-aos="zoom-in-right">
+            <div class="about-logo-wrap">
+              <img
+                src="assets/img/logo_deart.png"
+                class="img-fluid"
+                alt="Logo Deart Pinturas"
+              />
             </div>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <span class="section-chip">Sobre nós</span>
+            <h2>Experiência, acabamento fino e compromisso real</h2>
+            <p>
+              A Deart é especializada em pinturas em geral, grafiato e textura
+              para residências, comércios, escolas e indústrias.
+            </p>
+            <p>
+              Também executamos tratamento de trincas, impermeabilização,
+              rejuntamento de pisos, lavagem e pintura de telhados.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!--Compromisso-->
-    <section id="compromisso">
-        <div class="container">
-            <h2>O nosso compromisso</h2>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="avaliação">
-                        <i class="fas fa-star"></i>
-                        <h3>Qualidade</h3>
-                        <p>Trabalhamos com materiais de qualidade e profissionais capacitados.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="avaliação">
-                        <i class="fas fa-clock"></i>
-                        <h3>Agilidade</h3>
-                        <p>Realizamos o serviço com rapidez e eficiência.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="avaliação">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Compromisso</h3>
-                        <p>Comprometimento com o cliente e com o serviço prestado.</p>
-                    </div>
-                </div>
-            </div>
+    <section id="servicos" class="section-block section-light" data-reveal>
+      <div class="container">
+        <div class="section-title-wrap text-center">
+          <span class="section-chip">Serviços</span>
+          <h2>O que fazemos para valorizar seu imóvel</h2>
         </div>
+        <div class="row g-4">
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <article class="service-card">
+              <i class="fas fa-paint-roller"></i>
+              <h3>Pinturas</h3>
+              <p>
+                Pinturas internas e externas, grafiato, textura, pedras naturais
+                e cimento queimado.
+              </p>
+            </article>
+          </div>
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <article class="service-card">
+              <i class="fas fa-tools"></i>
+              <h3>Tratamentos</h3>
+              <p>
+                Correção de trincas e impermeabilização de paredes internas e
+                externas com técnicas adequadas.
+              </p>
+            </article>
+          </div>
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <article class="service-card">
+              <i class="fas fa-ruler-combined"></i>
+              <h3>Instalações</h3>
+              <p>
+                Instalações com acabamento limpo: forros, drywall, pisos
+                vinílicos e rodapés.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!--Avaliação dos clientes-->
-    <section id="avaliação">
-        <div class="container">
-            <h2>Avaliação dos clientes</h2>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="cliente">
-                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjXh9iEsZfjkugmgcqelU0uPKN2CznNYb4CWw_sffe2exgXdDYSp=w60-h60-p-rp-mo-br100"
-                            class="img-fluid" id="cliente" alt="">
-                        <div class="estrelas">
-                            <p>5</p>
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                        </div>
-
-                        <h3>Marilia Perroni</h3>
-                        <p>Profissional extremamente educado e pontual, com preço justo e excelente entrega! A pintura
-                            da minha sala ficou perfeita, além de ser muito ágil! Recomendo!.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="cliente">
-                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjUeZgBddt1iJdj70zb-wSEjlpVIdcw0EbfuAYJdWGnlp33sDCM=w60-h60-p-rp-mo-br100"
-                            class="img-fluid" alt=""><br>
-                        <div class="estrelas">
-                            <p>5</p>
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                        </div>
-                        <h3>Isabel Araújo</h3>
-                        <p>Excelente profissional, pontual preço justo e deixa tudo limpo e organizado super indico.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="cliente">
-                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjWZbsB0fi4NAKGI9Z4ZI1QqUMdZFQNKGB5qhiJC8GtafprmzyVB=w60-h60-p-rp-mo-br100"
-                            class="img-fluid" alt=""><br>
-                        <div class="estrelas">
-                            <p>5</p>
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                            <img src="./img/estrela.png" alt="">
-                        </div>
-                        <h3>Renato França</h3>
-                        <p>Excelente profissional, veio e fez o serviço em um dia com perfeito acabamento e ótima
-                            qualidade.
-                            Super recomendo</p>
-                    </div>
-                </div>
-                <button class="btn-avalia">
-                    <a
-                        href="https://www.google.com/maps/place/Pintor+Parque+S%C3%A3o+Domingos+Vila+Jaguara+Domitila+%7C+Deart+Pinturas+Residenciais+Comerciais+Impermeabiliza%C3%A7%C3%A3o/@-23.4389025,-46.8069429,17z/data=!4m8!3m7!1s0x94cefd79c6257b81:0x68a98fe447e33dec!8m2!3d-23.4389025!4d-46.8069429!9m1!1b1!16s%2Fg%2F11rxhy3r6d?entry=ttu&g_ep=EgoyMDI0MTAyMC4wIKXMDSoASAFQAw%3D%3D">Confira
-                        mais avaliações!</a>
-                </button>
-            </div>
+    <section id="compromisso" class="section-block" data-reveal>
+      <div class="container">
+        <div class="section-title-wrap text-center">
+          <span class="section-chip">Compromisso</span>
+          <h2>Como entregamos qualidade em cada projeto</h2>
         </div>
+        <div class="row g-4">
+          <div class="col-lg-4" data-aos="flip-left" data-aos-delay="100">
+            <article class="value-card">
+              <i class="fas fa-medal"></i>
+              <h3>Qualidade</h3>
+              <p>
+                Materiais de alto desempenho e equipe preparada para acabamento
+                premium.
+              </p>
+            </article>
+          </div>
+          <div class="col-lg-4" data-aos="flip-left" data-aos-delay="200">
+            <article class="value-card">
+              <i class="fas fa-stopwatch"></i>
+              <h3>Agilidade</h3>
+              <p>
+                Planejamento e execução para cumprir prazos com eficiência real.
+              </p>
+            </article>
+          </div>
+          <div class="col-lg-4" data-aos="flip-left" data-aos-delay="300">
+            <article class="value-card">
+              <i class="fas fa-handshake"></i>
+              <h3>Compromisso</h3>
+              <p>
+                Atendimento transparente e foco total na satisfação do cliente.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!--Galeria-->
-    <section id="galeria">
-        <h2>Galeria</h2>
-        <div class="galeria">
-            <div class="galeria-inner">
-                <img src="./img/clientes/01.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/02.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/03.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/04.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/05.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/06.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/07.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/08.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/09.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/10.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/11.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/12.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/13.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/14.jfif" alt="...">
-            </div>
-            <div class="galeria-inner">
-                <img src="./img/clientes/15.jfif" alt="...">
-            </div>
+    <section id="avaliacoes" class="section-block section-light" data-reveal>
+      <div class="container">
+        <div class="section-title-wrap text-center">
+          <span class="section-chip">Avaliações</span>
+          <h2>O que nossos clientes dizem</h2>
+          <p class="subtitle">
+            Depoimentos reais de quem já contratou a Deart.
+          </p>
         </div>
+        <div
+          id="reviewsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="9000"
+          data-bs-pause="hover"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="cliente">
+                <img
+                  src="https://lh3.googleusercontent.com/a-/ALV-UjXh9iEsZfjkugmgcqelU0uPKN2CznNYb4CWw_sffe2exgXdDYSp=w60-h60-p-rp-mo-br100"
+                  class="img-fluid"
+                  alt="Cliente Marilia Perroni"
+                />
+                <div class="estrelas">
+                  <span class="rating-value">5.0</span>
+                  <span class="stars" aria-label="5 de 5 estrelas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </div>
+                <h3>Marilia Perroni</h3>
+                <p>
+                  Profissional extremamente educado e pontual, com preço justo e
+                  excelente entrega. O resultado ficou perfeito.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cliente">
+                <img
+                  src="https://lh3.googleusercontent.com/a-/ALV-UjUeZgBddt1iJdj70zb-wSEjlpVIdcw0EbfuAYJdWGnlp33sDCM=w60-h60-p-rp-mo-br100"
+                  class="img-fluid"
+                  alt="Cliente Isabel Araújo"
+                />
+                <div class="estrelas">
+                  <span class="rating-value">5.0</span>
+                  <span class="stars" aria-label="5 de 5 estrelas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </div>
+                <h3>Isabel Araújo</h3>
+                <p>
+                  Excelente profissional, pontual e organizado. Serviço limpo,
+                  rápido e com ótimo acabamento.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cliente">
+                <img
+                  src="https://lh3.googleusercontent.com/a-/ALV-UjWZbsB0fi4NAKGI9Z4ZI1QqUMdZFQNKGB5qhiJC8GtafprmzyVB=w60-h60-p-rp-mo-br100"
+                  class="img-fluid"
+                  alt="Cliente Renato França"
+                />
+                <div class="estrelas">
+                  <span class="rating-value">5.0</span>
+                  <span class="stars" aria-label="5 de 5 estrelas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </div>
+                <h3>Renato França</h3>
+                <p>
+                  Atendimento profissional e acabamento de alta qualidade.
+                  Recomendo sem dúvidas.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cliente">
+                <img
+                  src="https://lh3.googleusercontent.com/a-/ALV-UjVxjylSE1q6Q6ApLc3xdKbRgvm74mU895H7HJQ6CRXjjZU5Q6-e2w=w72-h72-p-rp-mo-br100"
+                  class="img-fluid"
+                  alt="Cliente Sabrina Vitoria"
+                />
+                <div class="estrelas">
+                  <span class="rating-value">5.0</span>
+                  <span class="stars" aria-label="5 de 5 estrelas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </div>
+                <h3>Sabrina Vitoria</h3>
+                <p>
+                  Um trabalho excelente e de muita qualidade! Luciano está de
+                  parabéns pela qualidade no trabalho, entende do que faz, me
+                  deu várias dicas, e entregou o melhor trabalho já pintura do
+                  meu apartamento, fiquei apaixonada.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cliente">
+                <img
+                  src="https://lh3.googleusercontent.com/a-/ALV-UjXYjpRLKz6HK0Wp5iZ-UpZczE-DMx9HHGuLG099O2LFNec3dmME=w72-h72-p-rp-mo-br100"
+                  class="img-fluid"
+                  alt="Cliente Miguel Fialho"
+                />
+                <div class="estrelas">
+                  <span class="rating-value">5.0</span>
+                  <span class="stars" aria-label="5 de 5 estrelas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </div>
+                <h3>Miguel Fialho</h3>
+                <p>
+                  Profissional extremamente comprometido. Resolveu meus
+                  problemas na parede deixando-as perfeitas. Recomendo ele de
+                  olhos fechados.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cliente">
+                <img
+                  src="https://lh3.googleusercontent.com/a-/ALV-UjXc9mU0WWnJswunPCQVeE5DmpFgV4GqW3tN_Vg_fjNpbieYKs9d=w72-h72-p-rp-mo-ba4-br100"
+                  class="img-fluid"
+                  alt="Sandra Regina Lucca Leite"
+                />
+                <div class="estrelas">
+                  <span class="rating-value">5.0</span>
+                  <span class="stars" aria-label="5 de 5 estrelas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </div>
+                <h3>Sandra Regina Lucca Leite</h3>
+                <p>
+                  O Sr. Luciano fez um trabalho espetacular nas paredes, portas
+                  e janelas; uma verdadeira restauração porque as mesmas estavam
+                  muito danificadas devido a vazamentos antigos já sanados e
+                  pintura antiga. Fiquei surpresa com a rapidez, organização
+                  (não deixou sujeira). Preço justo. Sem falar na simpatia,
+                  sempre prestativo. Enfim entregou mais do que eu esperava.
+                  Recomendo de olhos fechados!
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#reviewsCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#reviewsCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+      </div>
     </section>
 
-        <a class="btn-wpp" href="https://wa.me/5511972228270">
-            <img src="./img/whatsappicon.png" width="60px" alt="Solicitar orçamento">
+    <section id="galeria" class="section-block" data-reveal>
+      <div class="container">
+        <div class="section-title-wrap text-center">
+          <span class="section-chip">Galeria</span>
+          <h2>Alguns dos nossos trabalhos</h2>
+        </div>
+        <div class="galeria" data-aos="zoom-in" data-aos-delay="100">
+          <div
+            class="galeria-inner"
+            data-caption="Sala pintada em tons neutros"
+          >
+            <img
+              src="assets/img/clientes/01.jfif"
+              alt="Sala pintada em tons neutros"
+            />
+          </div>
+          <div class="galeria-inner" data-caption="Parede texturizada branca">
+            <img src="assets/img/clientes/02.jfif" alt="Parede texturizada branca" />
+          </div>
+          <div
+            class="galeria-inner"
+            data-caption="Cozinha moderna com grafiato"
+          >
+            <img
+              src="assets/img/clientes/03.jfif"
+              alt="Cozinha moderna com grafiato"
+            />
+          </div>
+          <div
+            class="galeria-inner"
+            data-caption="Fachada comercial repaginada"
+          >
+            <img
+              src="assets/img/clientes/04.jfif"
+              alt="Fachada comercial repaginada"
+            />
+          </div>
+          <div class="galeria-inner" data-caption="Parede externa revitalizada">
+            <img
+              src="assets/img/clientes/05.jfif"
+              alt="Parede externa revitalizada"
+            />
+          </div>
+          <div class="galeria-inner" data-caption="Hall com grafiato colorido">
+            <img
+              src="assets/img/clientes/06.jfif"
+              alt="Hall com grafiato colorido"
+            />
+          </div>
+          <div class="galeria-inner" data-caption="Quarto infantil alegre">
+            <img src="assets/img/clientes/07.jfif" alt="Quarto infantil alegre" />
+          </div>
+          <div class="galeria-inner" data-caption="Sala comercial renovada">
+            <img src="assets/img/clientes/08.jfif" alt="Sala comercial renovada" />
+          </div>
+          <div
+            class="galeria-inner"
+            data-caption="Entrada com destaque em grafiato"
+          >
+            <img
+              src="assets/img/clientes/09.jfif"
+              alt="Entrada com destaque em grafiato"
+            />
+          </div>
+          <div
+            class="galeria-inner"
+            data-caption="Detalhe de acabamento interno"
+          >
+            <img
+              src="assets/img/clientes/10.jfif"
+              alt="Detalhe de acabamento interno"
+            />
+          </div>
+          <div class="galeria-inner" data-caption="Cozinha com pintura moderna">
+            <img
+              src="assets/img/clientes/11.jfif"
+              alt="Cozinha com pintura moderna"
+            />
+          </div>
+          <div class="galeria-inner" data-caption="Área de lazer reformada">
+            <img src="assets/img/clientes/12.jfif" alt="Área de lazer reformada" />
+          </div>
+          <div
+            class="galeria-inner"
+            data-caption="Pintura interna com tons pastel"
+          >
+            <img
+              src="assets/img/clientes/13.jfif"
+              alt="Pintura interna com tons pastel"
+            />
+          </div>
+          <div
+            class="galeria-inner"
+            data-caption="Pintura de parede decorativa"
+          >
+            <img
+              src="assets/img/clientes/14.jfif"
+              alt="Pintura de parede decorativa"
+            />
+          </div>
+          <div
+            class="galeria-inner"
+            data-caption="Detalhe de textura em grafiato"
+          >
+            <img
+              src="assets/img/clientes/15.jfif"
+              alt="Detalhe de textura em grafiato"
+            />
+          </div>
+          <div
+            class="galeria-inner"
+            data-caption="Pintura de parede decorativa"
+          >
+            <img
+              src="assets/img/clientes/16.webp"
+              alt="Pintura de parede decorativa"
+            />
+          </div>
+          <div
+            class="galeria-inner"
+            data-caption="Pintura de parede decorativa"
+          >
+            <img
+              src="assets/img/clientes/17.webp"
+              alt="Pintura de parede decorativa"
+            />
+          </div>
+          <div
+            class="galeria-inner"
+            data-caption="Pintura de parede decorativa"
+          >
+            <img
+              src="assets/img/clientes/18.webp"
+              alt="Pintura de parede decorativa"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a
+      class="btn-wpp"
+      href="https://wa.me/5511972228270"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="assets/img/whatsappicon.png" width="60" alt="Solicitar orçamento" />
+    </a>
+
+    <div id="lightbox-overlay">
+      <button class="close-lightbox" aria-label="Fechar">&times;</button>
+      <img src="" alt="Imagem ampliada" />
+      <div class="caption"></div>
+    </div>
+    <footer class="site-footer" data-aos="fade-up" data-aos-delay="200">
+      <div class="site-footer-inner">
+        <a href="#topo" class="footer-brand text-decoration-none">
+          <img src="assets/img/logo_deart.png" alt="Logo Deart Pinturas" />
+          <h3>Deart Pinturas</h3>
         </a>
 
+        <nav class="footer-links" aria-label="Diretórios do rodapé">
+          <a href="#topo">Home</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#galeria">Galeria</a>
+        </nav>
 
-        <!--Footer-->
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <p class="col-md-4 mb-0 text-body-secondary">&copy; Copyright 2024 - Todos direitos reservados</p>
+        <div class="footer-contact"></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Deart Pinturas. Todos os direitos reservados.</p>
+        <p>
+          Desenvolvido por
+          <a
+            href="https://gustavosl1.github.io/Portifolio-Pesooal/"
+            target="_blank"
+            rel="noopener"
+            class="desenvolvido"
+            >Gustavo Lima</a
+          >
+        </p>
+      </div>
+    </footer>
 
-                <a href="/"
-                    class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                    <img src="img/logo_deart.png" class="img-fluid" style="width: 40px;">
-                    <span class="logo">Deart</span>
-                </a>
-
-                <ul class="nav col-md-4 justify-content-end">
-                    <li class="nav-item"><a href="#"
-                            class="nav-link px-2 text-body-secondary text-dark bg-white">Home</a></li>
-                    <li class="nav-item"><a href="#"
-                            class="nav-link px-2 text-body-secondary text-dark bg-white">FAQs</a></li>
-                    <li class="nav-item"><a href="#"
-                            class="nav-link px-2 text-body-secondary text-dark bg-white">About</a></li>
-                </ul>
-
-            </footer>
-        </div>
-        <p class="marca">Desenvolvido por Gustavo Lima - Versão 1.6</p>
-
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script type="text/javascript">
-            $(function () {
-                var navbar = $('.header-inner');
-                $(window).scroll(function () {
-                    if ($(window).scrollTop() <= 40) {
-                        navbar.removeClass('navbar-scroll');
-                    } else {
-                        navbar.addClass('navbar-scroll');
-                    }
-                });
-            });
-        </script>
-        <a href="#topo" class="btn"></a>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-YfWJDtA0R3q5cCOFbYnMJwU20gsUouo+OoxVJdpOwbi88hZn0WzIwGZPGBW7MmhKhQYwCvSVb9RF52YlG8/LCw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="assets/js/script.js"></script>
+    <a href="#topo" class="btn-top" aria-label="Voltar ao topo"></a>
+  </body>
 </html>
+
